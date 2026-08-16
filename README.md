@@ -2,6 +2,8 @@
 
 面向 AI 产品与解决方案机会、专业合作和同路人连接的一页式个人主页。
 
+公开地址：<https://leinstein-room-908.bigdraw123.chatgpt.site/>
+
 ## 核心定位
 
 > 研究复杂系统，设计人的参与，创造值得共同记住的东西。
@@ -57,4 +59,4 @@ npm test
 - `public/xiaohongshu-profile.jpg`、`public/xiaohongshu-qr.jpg`、`public/wechat-official-qr.jpg`：用户提供并确认可公开；
 - `public/og-leinstein-room-908.png`：以用户照片为身份参考，通过内置图像生成能力制作的专属社交分享卡。生成要求为对称酒店编辑视觉、保留身份、奶油/粉/酒红/紫/蓝/金配色，并仅使用 `LEINSTEIN`、`RESEARCH · PRODUCT · PEOPLE`、`ROOM 908` 三组文字。
 
-以上素材仅用于本人个人主页与项目展示。当前项目尚未对外发布；发布和公开访问范围需单独确认。
+以上素材仅用于本人个人主页与项目展示。用户已确认主页、个人照片和账号二维码可以公开发布。
