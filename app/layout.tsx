@@ -9,16 +9,16 @@ export async function generateMetadata(): Promise<Metadata> {
     requestHeaders.get("x-forwarded-proto") ||
     (host.startsWith("localhost") ? "http" : "https");
   const origin = `${protocol}://${host}`;
-  const title = "Leinstein｜城市研究 × AI Agent × 内容创造";
+  const title = "Leinstein｜研究复杂系统，设计人的参与";
   const description =
-    "Leinstein 的个人主页：把城市规划师的判断力，转译成可体验、可验证、可交付的 AI 产品。";
+    "Leinstein 的个人主页：宏观经济与空间规划研究、AI 产品构建、内容与现场创造。让 AI 帮助人更好地感受、表达、连接并共同判断。";
 
   return {
     title,
     description,
     icons: {
-      icon: "/favicon.svg",
-      shortcut: "/favicon.svg",
+      icon: "/leinstein-portrait.jpg",
+      shortcut: "/leinstein-portrait.jpg",
     },
     openGraph: {
       title,
@@ -27,10 +27,10 @@ export async function generateMetadata(): Promise<Metadata> {
       locale: "zh_CN",
       images: [
         {
-          url: `${origin}/og.png`,
+          url: `${origin}/og-leinstein-room-908.png`,
           width: 1200,
           height: 630,
-          alt: "Leinstein — 城市研究、AI Agent 与内容创造",
+          alt: "Leinstein — Research, Product, People",
         },
       ],
     },
@@ -38,7 +38,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title,
       description,
-      images: [`${origin}/og.png`],
+      images: [`${origin}/og-leinstein-room-908.png`],
     },
   };
 }

@@ -1,24 +1,37 @@
 # Leinstein · Personal Portfolio
 
-面向黑客松报名、AI 行业机会与专业合作的一页式个人主页。
+面向 AI 产品与解决方案机会、专业合作和同路人连接的一页式个人主页。
 
-## 定位
+## 核心定位
 
-- 主线：城市研究 × AI Agent × 内容创造
-- 核心作品：City Afterimage / 城市潜像
-- 目标：让评委、招聘方或合作伙伴在 90 秒内理解 Leinstein 是谁、做过什么、可以一起解决什么问题
-- 隐私边界：省级智库与内部平台经历只做匿名、脱敏表达，不公开单位材料、内部地址或联系方式
+> 研究复杂系统，设计人的参与，创造值得共同记住的东西。
 
-## 当前状态
+Leinstein 的经验横跨宏观经济发展与空间规划研究、AI 产品原型、个人内容系统和真实现场组织。主页不把这些经历平铺成项目清单，而是使用三层结构：
 
-- 单页内容与响应式视觉已完成
-- 城市潜像 60 秒演示已内嵌，避免原 Demo 暂时不可访问时没有作品证据
-- GitHub 已接入
-- 小红书「暴暴躁躁伍六七」与公众号「暴暴躁躁」已绑定公开二维码
-- 公众号代表文章已绑定，网站不公开真实姓名、手机号或单位名称
-- 发布前仍需确认最终公开访问范围
+- `NOW`：已经完成或可以运行的项目证据；
+- `BRINGING PEOPLE IN`：课程、演唱会、视频与写作，证明沟通和组织能力；
+- `NEXT / TOGETHER`：AI × 城市与社区、能量与 Social、音乐与共同创作、研究与判断系统四个开放方向。
 
-## 本地运行
+## 当前页面
+
+- 公开身份使用 `Leinstein`，不在站内展示真实姓名；
+- 城市潜像作为旗舰作品，提供已核实的在线 Demo、60 秒本地视频与 GitHub；
+- 宠物表达分身、小雷编辑部、Research Framing Compiler、BUY / RENT / WAIT 均使用真实项目画面，并明确区分在线 Demo、本地原型和自用工具；
+- 省级数字平台案例只展示脱敏后的可迁移方法；
+- 300 人个人演唱会、AI 工作流分享和新年视频用于呈现现场组织、概念转译与沟通能力；
+- 小红书和公众号使用用户确认可公开的二维码，公众号接入两篇代表文章；
+- 个人照片已获用户确认，可用于主页与公开分享卡；
+- 视觉采用奶油、酒店粉、酒红、薰衣草紫、粉蓝与芥末金，并以中央轴线、双线边框和房间编号形成对称秩序；移动端自然转为单列。
+
+## 公开边界
+
+- 不上传原始 AI 分享课件，其中包含真实姓名、内部业务语境和不宜公开的过程信息；主页仅使用经过核实的通用课程设计事实；
+- 不展示单位名称、内部材料、真实政策课题、联系方式或无法独立核验的效率与准确率数字；
+- Research Framing Compiler 不表述为已经实现的 Multi-Agent；
+- AI 音乐、AI × ENFP 能量恢复、AI × 社区和 AI × Social 只放在开放问题区，不冒充已完成产品；
+- 小雷编辑部只使用脱敏测试界面，不使用包含私人反思原文和对话的截图。
+
+## 本地运行与验证
 
 需要 Node.js `>=22.13.0`。
 
@@ -30,11 +43,15 @@ npm test
 
 ## 资产来源
 
-- `public/city-afterimage-preview.png`：复制自 `projects/city-afterimage/public/og.png`
-- `public/city-afterimage-demo.mp4`：复制自 `projects/city-afterimage/public/city-afterimage-openarena-60s.mp4`
-- `public/favicon.svg`：复制自 `projects/city-afterimage/public/favicon.svg`
-- `public/xiaohongshu-profile.jpg` 与 `public/xiaohongshu-qr.jpg`：用户提供的小红书公开名片及二维码裁切版
-- `public/wechat-official-qr.jpg`：用户提供的公众号二维码
-- `public/og.png`：使用内置图像生成工具编辑的 Leinstein 专属社交分享卡
+- `public/leinstein-portrait.jpg`：用户提供并确认可公开的个人照片；
+- `public/city-afterimage-preview.png`：复制自 `projects/city-afterimage/public/og.png`；
+- `public/city-afterimage-demo.mp4`：复制自 `projects/city-afterimage/public/city-afterimage-openarena-60s.mp4`；
+- `public/wu67-enfp-expression-preview.png`、`public/sticker-wu67-contact-sheet.png`：复制自伍六七表情系统的公开展示预览；
+- `public/editorial-studio-entries.png`：复制自小雷编辑部脱敏测试界面；
+- `public/wu67-character-system.png`：复制自 Leinstein × 伍六七角色母版；
+- `public/research-framing-compiler-og.png`：复制自 Research Framing Compiler 项目分享卡；
+- `public/buy-rent-wait-og.png`：复制自 BUY / RENT / WAIT 项目分享卡；
+- `public/xiaohongshu-profile.jpg`、`public/xiaohongshu-qr.jpg`、`public/wechat-official-qr.jpg`：用户提供并确认可公开；
+- `public/og-leinstein-room-908.png`：以用户照片为身份参考，通过内置图像生成能力制作的专属社交分享卡。生成要求为对称酒店编辑视觉、保留身份、奶油/粉/酒红/紫/蓝/金配色，并仅使用 `LEINSTEIN`、`RESEARCH · PRODUCT · PEOPLE`、`ROOM 908` 三组文字。
 
-以上素材仅用于本人的个人主页与项目展示。
+以上素材仅用于本人个人主页与项目展示。当前项目尚未对外发布；发布和公开访问范围需单独确认。
