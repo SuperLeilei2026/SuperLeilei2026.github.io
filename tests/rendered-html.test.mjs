@@ -47,6 +47,7 @@ test("server-renders Leinstein's public portfolio", async () => {
   assert.match(html, /github\.com\/leinstein908\/city-afterimage/);
   assert.match(html, /leinstein-portrait\.jpg/);
   assert.match(html, /og-leinstein-room-908\.png/);
+  assert.doesNotMatch(html, /\/_next\/image/);
   assert.doesNotMatch(html, /雷静|LEILEI/);
   assert.doesNotMatch(html, /省级智库研究城市|政策研究 Multi-Agent/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/);

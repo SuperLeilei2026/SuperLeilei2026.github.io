@@ -173,6 +173,7 @@ export default function Home() {
               width={1800}
               height={1800}
               priority
+              unoptimized
             />
             <div className="portrait-ribbon">CURIOUS ABOUT PEOPLE</div>
           </div>
@@ -287,6 +288,7 @@ export default function Home() {
                   alt={project.imageAlt}
                   fill
                   sizes="(max-width: 760px) 100vw, 50vw"
+                  unoptimized
                 />
                 {project.accentImage ? (
                   <div className="project-accent-image">
@@ -295,6 +297,7 @@ export default function Home() {
                       alt={project.accentAlt ?? ""}
                       fill
                       sizes="180px"
+                      unoptimized
                     />
                   </div>
                 ) : null}
@@ -488,6 +491,7 @@ export default function Home() {
                 alt="暴暴躁躁伍六七的小红书二维码"
                 width={400}
                 height={400}
+                unoptimized
               />
             </a>
           </article>
@@ -508,6 +512,7 @@ export default function Home() {
                 alt="暴暴躁躁公众号二维码"
                 width={430}
                 height={430}
+                unoptimized
               />
             </a>
           </article>
