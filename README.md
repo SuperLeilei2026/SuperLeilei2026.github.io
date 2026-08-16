@@ -16,12 +16,12 @@ Leinstein 的经验横跨宏观经济发展与空间规划研究、AI 产品原�
 
 - 公开身份使用 `Leinstein`，不在站内展示真实姓名；
 - 城市潜像作为旗舰作品，提供已核实的在线 Demo、60 秒本地视频与 GitHub；
-- 宠物表达分身、小雷编辑部、Research Framing Compiler、BUY / RENT / WAIT 均使用真实项目画面，并明确区分在线 Demo、本地原型和自用工具；
-- 省级数字平台案例只展示脱敏后的可迁移方法；
-- 300 人个人演唱会、AI 工作流分享和新年视频用于呈现现场组织、概念转译与沟通能力；
-- 小红书和公众号使用用户确认可公开的二维码，公众号接入两篇代表文章；
+- 宠物表达分身、小雷编辑部、Research Framing Compiler、BUY / RENT / WAIT 均使用真实项目画面，并直接说明“为谁设计、要解决什么”；
+- 省级数字平台案例只展示脱敏后的可迁移方法，并以跨部门业务与技术团队的沟通错位为问题入口；
+- 300 人个人演唱会、AI 工作流分享和新年视频用于呈现现场组织、概念转译与沟通能力；新年视频使用原创 16:9 场景插画替代无含义的数字装饰；
+- 小红书和公众号使用用户确认可公开的二维码；两篇公众号代表文章分别配有基于文章主题创作的原创插画；
 - 个人照片已获用户确认，可用于主页与公开分享卡；
-- 视觉采用奶油、酒店粉、酒红、薰衣草紫、粉蓝与芥末金，并以中央轴线、双线边框和房间编号形成对称秩序；移动端自然转为单列。
+- 视觉以酒店粉、粉蓝和奶油色为大面积主色，酒红只用于文字、细边框、徽章和按钮等小面积强调；中央轴线、双线边框与对称分区延续复古酒店秩序，移动端自然转为单列。
 
 ## 公开边界
 
@@ -51,6 +51,9 @@ npm test
 - `public/wu67-character-system.png`：复制自 Leinstein × 伍六七角色母版；
 - `public/research-framing-compiler-og.png`：复制自 Research Framing Compiler 项目分享卡；
 - `public/buy-rent-wait-og.png`：复制自 BUY / RENT / WAIT 项目分享卡；
+- `public/new-year-video-illustration.png`：以用户确认可公开的个人照片为身份参考，通过内置图像生成能力制作。画面以对称粉蓝片场同时呈现歌词/分镜、摄影、演员走位与后期剪辑，且不含可读文字或品牌标识；
+- `public/article-big-question-illustration.png`：依据《我想找到一个大到足以吞掉我全部犹豫的问题》的核心命题创作。Leinstein 与伍六七把散乱犹豫整理成通向门外的一条路线；角色身份遵循 Leinstein × 伍六七角色母版；
+- `public/article-fitness-illustration.png`：依据《不爱看书的我罚自己健身》的标题和行动主题创作。书本负担被伍六七牵引并展开为身体行动的路径；角色身份遵循 Leinstein × 伍六七角色母版；
 - `public/xiaohongshu-profile.jpg`、`public/xiaohongshu-qr.jpg`、`public/wechat-official-qr.jpg`：用户提供并确认可公开；
 - `public/og-leinstein-room-908.png`：以用户照片为身份参考，通过内置图像生成能力制作的专属社交分享卡。生成要求为对称酒店编辑视觉、保留身份、奶油/粉/酒红/紫/蓝/金配色，并仅使用 `LEINSTEIN`、`RESEARCH · PRODUCT · PEOPLE`、`ROOM 908` 三组文字。
 

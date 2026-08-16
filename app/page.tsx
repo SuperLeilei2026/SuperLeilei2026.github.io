@@ -18,6 +18,8 @@ const projects = [
     subtitle: "伍六七表情工坊",
     description:
       "从真实宠物的照片、口头禅、表情与动作出发，生成属于它的表达提案。技术只是手段，我更在意怎样保留一段关系里独有的语气。",
+    forWho: "想把自家宠物的个性带进日常聊天的养宠人",
+    need: "通用表情包很难保留一只宠物独有的动作、语气和关系记忆",
     image: "/wu67-enfp-expression-preview.png",
     imageAlt: "伍六七 ENFP 表情系统十六张预览",
     accentImage: "/sticker-wu67-contact-sheet.png",
@@ -32,6 +34,8 @@ const projects = [
     subtitle: "个人思想与内容工作台",
     description:
       "把聊天、生活片段、灵感、文章、配图和角色关系组织成持续创作的链路。它不是替我写一篇文章，而是帮助我保留个人语气与长期问题。",
+    forWho: "像我一样，在聊天和生活里不断积累素材的长期创作者",
+    need: "灵感散落在不同入口，普通 AI 写作又容易洗掉个人语气和关系脉络",
     image: "/editorial-studio-entries.png",
     imageAlt: "小雷编辑部生活与灵感界面",
     accentImage: "/wu67-character-system.png",
@@ -46,6 +50,8 @@ const projects = [
     subtitle: "研究判断编译器",
     description:
       "把专家对研究框架的一次修改，编译为下一次可执行、可解释、可迭代的判断规则。公开 Demo 使用虚构课题，并把最终判断留给人。",
+    forWho: "需要共同修改研究框架的专业研究者与评审者",
+    need: "专家反馈常停留在一次性批注里，难以转化为下一轮研究可复用的判断规则",
     image: "/research-framing-compiler-og.png",
     imageAlt: "Research Framing Compiler 项目预览",
     tone: "wine",
@@ -58,6 +64,8 @@ const projects = [
     subtitle: "数码产品决策与资产成本工具",
     description:
       "把公开买价、30 天租金、残值和使用把握放进同一张可解释的决策图；购买以后，继续追踪每天成本与租赁翻转日。",
+    forWho: "面对高价数码产品，在买、租、等之间反复犹豫的人",
+    need: "价格、残值和真实使用频率分散，凭感觉做决定后也不知道买得是否值得",
     image: "/buy-rent-wait-og.png",
     imageAlt: "BUY RENT WAIT 项目预览",
     tone: "gold",
@@ -225,9 +233,9 @@ export default function Home() {
       <section className="section-shell now-section" id="now">
         <SectionTitle
           number="01"
-          eyebrow="NOW / 已经做出来的"
-          title="从一个真实的人开始"
-          note="不是项目清单，而是我反复解决问题的几种方式。"
+          eyebrow="NOW / 项目背后的需求察觉"
+          title="这些项目，是为谁、解决什么问题？"
+          note="每个项目都从一个具体的人和一种真实困境开始。"
         />
 
         <article className="flagship-card" id="city-afterimage">
@@ -249,12 +257,16 @@ export default function Home() {
           <div className="flagship-copy">
             <div className="project-number">01 / FLAGSHIP</div>
             <p className="project-eyebrow">CITY AFTERIMAGE · 城市潜像</p>
-            <h3>先看见你想重复的一天，再决定住进哪里。</h3>
+            <h3>先陪你一起画出完美一天的画像，再决定住在哪儿。</h3>
             <p>
               面向异地入职者的可解释迁居决策 Agent。它不从房源开始，
               而是从真实班表、通勤底线与生活场景出发，先生成一份可修改的“生活潜像”，
               再连接武汉地图证据与三种生活圈建议。
             </p>
+            <div className="need-lines">
+              <span><b>为谁</b>刚到陌生城市工作，不知道住在哪里才能兼顾通勤与生活的人</span>
+              <span><b>要解决</b>房源平台只回答“哪里有房”，却没有先理解“你想过怎样的一天”</span>
+            </div>
             <div className="fact-row" aria-label="城市潜像项目数据">
               <span><b>22</b><small>个武汉生活圈种子</small></span>
               <span><b>3</b><small>种不同决策角色</small></span>
@@ -310,6 +322,10 @@ export default function Home() {
                 <h3>{project.title}</h3>
                 <p className="project-subtitle">{project.subtitle}</p>
                 <p>{project.description}</p>
+                <div className="need-lines">
+                  <span><b>为谁</b>{project.forWho}</span>
+                  <span><b>要解决</b>{project.need}</span>
+                </div>
                 <ul className="tag-list">
                   {project.tags.map((tag) => <li key={tag}>{tag}</li>)}
                 </ul>
@@ -325,11 +341,15 @@ export default function Home() {
           </div>
           <div className="case-copy">
             <p>PROFESSIONAL PRACTICE · 省级数字平台业务产品化</p>
-            <h3>把宏观经济与空间规划的真实业务，翻译成可以持续迭代的数字产品。</h3>
+            <h3>当业务与技术说着不同语言，怎样把模糊需求变成可上线、可迭代的数字产品？</h3>
             <p>
               长期面对需求模糊、参与者众多、数据不完整的问题；参与需求梳理、
               开发协同、上线验收与反馈迭代。这里不展示单位材料，只保留可迁移的方法。
             </p>
+            <div className="need-lines">
+              <span><b>为谁</b>共同建设省级数字平台的跨部门业务人员与技术团队</span>
+              <span><b>要解决</b>业务需求、数据口径与开发语言彼此错位，造成反复沟通和返工</span>
+            </div>
           </div>
           <ol className="case-process" aria-label="数字平台业务产品化流程">
             <li><span>01</span>业务需求</li>
@@ -375,7 +395,15 @@ export default function Home() {
               </ul>
             </article>
             <article className="people-card people-card-video">
-              <span className="people-metric">01</span>
+              <div className="people-visual">
+                <Image
+                  src="/new-year-video-illustration.png"
+                  alt="从歌词改编、现场统筹到后期协作的新年视频创作插画"
+                  fill
+                  sizes="(max-width: 760px) 100vw, 50vw"
+                  unoptimized
+                />
+              </div>
               <p>VIDEO · FULL-CYCLE CREATION</p>
               <h3>从歌词改编到现场与后期统筹</h3>
               <p className="people-description">
@@ -389,19 +417,44 @@ export default function Home() {
 
           <div className="writing-strip">
             <div>
-              <p>WRITING / 我怎样观察自己与世界</p>
-              <h3>内容不是项目旁边的装饰，也是我理解人的方法。</h3>
+              <p>WRITING / 公众号「暴暴躁躁」</p>
+              <h3>我的公众号文章</h3>
+              <span>从寻找值得长期投入的大问题，到在健身和生活里观察自己的行动方式。</span>
             </div>
-            <div className="article-links">
-              <a href={wechatArticleUrl} target="_blank" rel="noreferrer">
-                <span>01</span>
-                我想找到一个大到足以吞掉我全部犹豫的问题
-                <i aria-hidden="true">↗</i>
+            <div className="article-showcase">
+              <a className="article-card" href={wechatArticleUrl} target="_blank" rel="noreferrer">
+                <div className="article-card-image">
+                  <Image
+                    src="/article-big-question-illustration.png"
+                    alt="寻找一个足够重要的问题的文章插画"
+                    fill
+                    sizes="(max-width: 760px) 100vw, 50vw"
+                    unoptimized
+                  />
+                </div>
+                <div>
+                  <span>关于选择与投入</span>
+                  <h4>我想找到一个大到足以吞掉我全部犹豫的问题</h4>
+                  <p>当方向很多、犹豫太久，我开始寻找一个真正值得长期投入的问题。</p>
+                  <i aria-hidden="true">阅读文章 ↗</i>
+                </div>
               </a>
-              <a href={fitnessArticleUrl} target="_blank" rel="noreferrer">
-                <span>02</span>
-                不爱看书的我罚自己健身
-                <i aria-hidden="true">↗</i>
+              <a className="article-card" href={fitnessArticleUrl} target="_blank" rel="noreferrer">
+                <div className="article-card-image">
+                  <Image
+                    src="/article-fitness-illustration.png"
+                    alt="在健身与日常行动中观察自己的文章插画"
+                    fill
+                    sizes="(max-width: 760px) 100vw, 50vw"
+                    unoptimized
+                  />
+                </div>
+                <div>
+                  <span>关于身体与行动</span>
+                  <h4>不爱看书的我罚自己健身</h4>
+                  <p>从一句自我玩笑出发，记录身体、行动与真实生活里荒诞又具体的瞬间。</p>
+                  <i aria-hidden="true">阅读文章 ↗</i>
+                </div>
               </a>
             </div>
           </div>
@@ -430,14 +483,13 @@ export default function Home() {
         <div className="section-shell">
           <SectionTitle
             number="04"
-            eyebrow="NEXT / 还想把这些问题做出来"
-            title="四间尚未住满的房间"
-            note="它们不是已经完成的产品，而是欢迎同路人一起进入的开放问题。"
+            eyebrow="NEXT / 想找同道人一起做"
+            title="我对这些方向感兴趣，想认识同道人"
+            note="AI × 城市与社区 · AI × ENFP 能量恢复 · AI × 音乐与 Social · 可解释判断系统"
           />
           <p className="next-intro">
-            我想做的不只是更会工作的 AI，也包括更懂得让人活起来的 AI：
-            理解城市怎样承接日常，帮助人找到能量节律，让陌生人因为共同兴趣建立连接，
-            也让复杂判断仍然能够被人理解和修正。
+            我正在继续探索 AI × 城市社区、AI × ENFP 能量恢复、AI × 音乐共同创作与 Social，
+            以及可解释的复杂判断系统。想认识正在做这些事情的人，一起交换真实场景、问题和原型。
           </p>
           <div className="room-grid">
             {futureRooms.map((room) => (

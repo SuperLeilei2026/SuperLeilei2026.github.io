@@ -1,21 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --cream: #f6e7d2;
-  --paper: #fff9ef;
-  --paper-deep: #ead8c1;
-  --pink: #dfa0a6;
-  --pink-deep: #bd6f7e;
-  --wine: #74283b;
-  --wine-dark: #511a2b;
-  --lavender: #9c7baf;
-  --lavender-light: #d9cae2;
-  --blue: #8fb7c4;
-  --blue-light: #c8dde1;
-  --gold: #d3a449;
-  --gold-light: #ecd69f;
-  --espresso: #2f2524;
-  --muted: #725f59;
+  --cream: #fff1da;
+  --paper: #fffaf3;
+  --paper-deep: #f1ddd4;
+  --pink: #e8a5b8;
+  --pink-light: #f7dce4;
+  --pink-deep: #c96482;
+  --wine: #7c2948;
+  --wine-dark: #541b35;
+  --lavender: #a38abb;
+  --lavender-light: #ded3eb;
+  --blue: #82b8cf;
+  --blue-light: #cee8f0;
+  --blue-mist: #e8f5f8;
+  --gold: #d5a746;
+  --gold-light: #f1dca5;
+  --espresso: #34272c;
+  --muted: #735f65;
   --line: rgba(47, 37, 36, 0.24);
   --serif: "Iowan Old Style", "Bodoni 72", Didot, "Songti SC", STSong,
     "Noto Serif CJK SC", serif;
@@ -203,11 +205,17 @@ main {
   padding: 86px clamp(24px, 6vw, 104px) 112px;
   text-align: center;
   background:
-    radial-gradient(circle at 18% 28%, rgba(223, 160, 166, 0.32), transparent 23%),
-    radial-gradient(circle at 82% 66%, rgba(143, 183, 196, 0.34), transparent 22%),
-    linear-gradient(90deg, rgba(116, 40, 59, 0.035) 1px, transparent 1px),
-    linear-gradient(rgba(116, 40, 59, 0.035) 1px, transparent 1px),
-    var(--cream);
+    radial-gradient(circle at 18% 28%, rgba(255, 250, 243, 0.55), transparent 23%),
+    radial-gradient(circle at 82% 66%, rgba(255, 250, 243, 0.58), transparent 22%),
+    linear-gradient(90deg, rgba(124, 41, 72, 0.04) 1px, transparent 1px),
+    linear-gradient(rgba(124, 41, 72, 0.04) 1px, transparent 1px),
+    linear-gradient(
+      90deg,
+      var(--pink-light) 0 22%,
+      var(--cream) 22% 50%,
+      var(--cream) 50% 78%,
+      var(--blue-light) 78% 100%
+    );
   background-size: auto, auto, 58px 58px, 58px 58px, auto;
   border-bottom: 1px solid var(--wine);
 }
@@ -450,10 +458,14 @@ main {
 .opening-note {
   position: relative;
   padding: 106px 24px 112px;
-  color: var(--cream);
+  color: var(--espresso);
   text-align: center;
-  background: var(--wine);
-  border-bottom: 8px solid var(--pink);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, var(--pink) 0 50%, var(--blue-light) 50% 100%);
+  background-size: 72px 72px, auto;
+  border-top: 1px solid var(--wine);
+  border-bottom: 8px solid var(--cream);
 }
 
 .opening-note::before,
@@ -461,7 +473,7 @@ main {
   content: "◆";
   position: absolute;
   top: 50%;
-  color: var(--gold);
+  color: var(--wine);
   font-size: 18px;
   transform: translateY(-50%);
 }
@@ -476,13 +488,14 @@ main {
 
 .opening-note > p {
   margin: 0 0 25px;
-  color: var(--gold-light);
+  color: var(--wine);
   font: 750 10px/1 var(--sans);
   letter-spacing: 0.2em;
 }
 
 .opening-note h2 {
   margin: 0;
+  color: var(--wine);
   font: 500 clamp(25px, 3vw, 44px)/1.25 var(--serif);
 }
 
@@ -542,22 +555,24 @@ main {
 }
 
 .section-title-light {
-  border-color: var(--gold-light);
+  border-color: var(--wine);
 }
 
 .section-title-light .section-number {
-  color: var(--wine);
-  background: var(--gold-light);
-  border-color: var(--pink);
+  color: var(--cream);
+  background: var(--wine);
+  border-color: var(--gold);
 }
 
 .section-title-light p,
 .section-title-light small {
-  color: var(--gold-light);
+  color: var(--wine);
 }
 
 .now-section {
-  background: var(--cream);
+  background:
+    linear-gradient(90deg, rgba(232, 165, 184, 0.11) 0 50%, rgba(130, 184, 207, 0.12) 50% 100%),
+    var(--cream);
 }
 
 .flagship-card {
@@ -578,7 +593,7 @@ main {
   overflow: hidden;
   background:
     radial-gradient(circle at center, rgba(255, 249, 239, 0.35), transparent 35%),
-    linear-gradient(135deg, var(--pink) 0 50%, var(--pink-deep) 50% 100%);
+    linear-gradient(135deg, var(--pink) 0 49.8%, var(--blue-light) 50.2% 100%);
   border-right: 1px solid var(--wine);
 }
 
@@ -767,7 +782,10 @@ main {
 }
 
 .project-image > img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: transform 300ms ease;
 }
 
@@ -785,19 +803,26 @@ main {
 }
 
 .project-card-wine .project-image {
-  background: var(--wine-dark);
+  background: var(--blue-light);
 }
 
 .project-card-gold .project-image {
-  background: var(--gold-light);
+  background: var(--pink-light);
+}
+
+.project-card-wine .project-image > img,
+.project-card-gold .project-image > img {
+  padding: 20px;
+  object-fit: contain !important;
+  object-position: center !important;
 }
 
 .project-accent-image {
   position: absolute;
   right: 22px;
   bottom: 19px;
-  width: 132px;
-  height: 190px;
+  width: 190px;
+  height: 270px;
   overflow: hidden;
   background: var(--paper);
   border: 5px solid var(--paper);
@@ -805,8 +830,9 @@ main {
 }
 
 .project-accent-image img {
-  object-fit: cover;
-  object-position: 50% 18%;
+  padding: 3px;
+  object-fit: contain !important;
+  object-position: center !important;
 }
 
 .project-card-copy {
@@ -875,10 +901,10 @@ main {
   align-items: center;
   margin-top: 22px;
   padding: clamp(36px, 5vw, 72px);
-  color: var(--cream);
-  background: var(--wine);
-  border: 1px solid var(--wine-dark);
-  box-shadow: 12px 12px 0 var(--gold);
+  color: var(--espresso);
+  background: linear-gradient(90deg, var(--pink-light) 0 31%, var(--blue-light) 31% 100%);
+  border: 1px solid var(--wine);
+  box-shadow: 12px 12px 0 var(--pink);
 }
 
 .case-seal {
@@ -890,8 +916,8 @@ main {
   gap: 8px;
   color: var(--wine);
   text-align: center;
-  background: var(--gold-light);
-  border: 4px double var(--wine-dark);
+  background: var(--paper);
+  border: 4px double var(--wine);
   border-radius: 50%;
 }
 
@@ -908,7 +934,7 @@ main {
 
 .case-copy > p:first-child {
   margin: 0 0 17px;
-  color: var(--gold-light);
+  color: var(--wine);
   font: 750 9px/1 var(--sans);
   letter-spacing: 0.14em;
 }
@@ -923,7 +949,7 @@ main {
 .case-copy > p:last-child {
   max-width: 700px;
   margin: 20px 0 0;
-  color: rgba(246, 231, 210, 0.72);
+  color: var(--muted);
   font-size: 12px;
   line-height: 1.78;
 }
@@ -934,7 +960,7 @@ main {
   margin: 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid rgba(246, 231, 210, 0.35);
+  border-top: 1px solid rgba(124, 41, 72, 0.28);
 }
 
 .case-process li {
@@ -942,20 +968,20 @@ main {
   grid-template-columns: 38px 1fr;
   gap: 12px;
   padding: 14px 0;
-  border-bottom: 1px solid rgba(246, 231, 210, 0.35);
+  border-bottom: 1px solid rgba(124, 41, 72, 0.28);
   font-size: 11px;
 }
 
 .case-process span {
-  color: var(--gold-light);
+  color: var(--wine);
   font-size: 9px;
 }
 
 .people-section {
-  color: var(--cream);
+  color: var(--espresso);
   background:
-    linear-gradient(90deg, rgba(246, 231, 210, 0.035) 1px, transparent 1px),
-    var(--wine-dark);
+    linear-gradient(90deg, rgba(124, 41, 72, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, var(--blue-light) 0 50%, var(--pink-light) 50% 100%);
   background-size: 70px 70px;
 }
 
@@ -976,7 +1002,7 @@ main {
 }
 
 .people-card-pink {
-  background: var(--pink);
+  background: var(--pink-light);
 }
 
 .people-card-course {
@@ -984,7 +1010,7 @@ main {
 }
 
 .people-card-video {
-  background: var(--lavender-light);
+  background: var(--blue-mist);
 }
 
 .people-metric {
@@ -1026,8 +1052,8 @@ main {
   gap: 7px;
   margin-bottom: auto;
   padding: 20px;
-  background: var(--wine);
-  border: 3px double var(--gold-light);
+  background: var(--blue);
+  border: 3px double var(--wine);
 }
 
 .course-diagram span {
@@ -1053,8 +1079,8 @@ main {
   margin-top: 16px;
   padding: clamp(38px, 5vw, 72px);
   color: var(--espresso);
-  background: var(--gold-light);
-  border: 1px solid var(--gold);
+  background: linear-gradient(90deg, var(--pink-light) 0 50%, var(--blue-mist) 50% 100%);
+  border: 1px solid var(--wine);
 }
 
 .writing-strip > div:first-child > p {
@@ -1068,6 +1094,157 @@ main {
   margin: 0;
   font: 600 clamp(28px, 3vw, 43px)/1.16 var(--serif);
   letter-spacing: -0.035em;
+}
+
+.need-lines {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 30px 0 44px;
+  padding: 0;
+  list-style: none;
+}
+
+.need-lines > * {
+  min-height: 104px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding: 20px;
+  color: var(--wine);
+  text-align: center;
+  background: var(--paper);
+  border: 1px solid var(--wine);
+  box-shadow: 5px 5px 0 var(--blue);
+  font: 600 clamp(15px, 1.5vw, 20px)/1.5 var(--serif);
+}
+
+.need-lines b {
+  color: var(--pink-deep);
+  font: 800 9px/1 var(--sans);
+  letter-spacing: 0.14em;
+}
+
+.need-lines > :nth-child(even) {
+  background: var(--blue-mist);
+  box-shadow-color: var(--pink);
+}
+
+.people-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 28px;
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid var(--wine);
+  box-shadow: 6px 6px 0 color-mix(in srgb, var(--blue) 62%, transparent);
+}
+
+.people-visual img,
+.people-visual video {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 8px;
+  background: var(--paper);
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+.article-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.article-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: var(--espresso);
+  background: var(--paper);
+  border: 1px solid var(--wine);
+  box-shadow: 7px 7px 0 var(--blue);
+}
+
+.article-card:nth-child(even) {
+  box-shadow-color: var(--pink);
+}
+
+.article-card > img,
+.article-card > a:first-child,
+.article-card > div:first-child {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--paper);
+  border-bottom: 1px solid var(--wine);
+}
+
+.article-card img {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 8px;
+  background: var(--paper);
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+.article-card h3,
+.article-card h4 {
+  margin: 10px 0 10px;
+  color: var(--espresso);
+  font: 600 clamp(20px, 2vw, 30px)/1.25 var(--serif);
+}
+
+.article-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.article-card > div:last-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 22px 24px 24px;
+}
+
+.article-card > div:last-child > span {
+  color: var(--pink-deep);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.article-card > div:last-child > i {
+  margin-top: auto;
+  padding-top: 22px;
+  color: var(--wine);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 750;
+}
+
+.article-card > a:last-child {
+  width: fit-content;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  margin: auto 24px 20px;
+  color: var(--wine);
+  border-bottom: 1px solid currentColor;
+  font-size: 10px;
+  font-weight: 750;
 }
 
 .article-links {
@@ -1095,7 +1272,7 @@ main {
 }
 
 .method-section {
-  background: var(--cream);
+  background: linear-gradient(90deg, var(--blue-mist) 0 50%, var(--pink-light) 50% 100%);
 }
 
 .method-grid {
@@ -1113,6 +1290,10 @@ main {
 
 .method-grid article:nth-child(even) {
   background: var(--blue-light);
+}
+
+.method-grid article:nth-child(3) {
+  background: var(--pink-light);
 }
 
 .method-grid article:last-child {
@@ -1144,9 +1325,9 @@ main {
 
 .next-section {
   background:
-    linear-gradient(rgba(116, 40, 59, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(116, 40, 59, 0.035) 1px, transparent 1px),
-    #efd6d4;
+    linear-gradient(rgba(124, 41, 72, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 41, 72, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, var(--blue-mist) 0 50%, var(--pink-light) 50% 100%);
   background-size: 60px 60px;
   border-top: 1px solid var(--wine);
   border-bottom: 1px solid var(--wine);
@@ -1256,7 +1437,9 @@ main {
   position: relative;
   padding: 116px max(24px, 8vw) 122px;
   text-align: center;
-  background: var(--paper);
+  background:
+    radial-gradient(circle at 50% 36%, var(--paper) 0 24%, transparent 55%),
+    linear-gradient(90deg, var(--pink-light) 0 50%, var(--blue-light) 50% 100%);
 }
 
 .together-section::before,
@@ -1502,7 +1685,7 @@ footer a {
 
   .case-process li {
     grid-template-columns: 1fr;
-    border-right: 1px solid rgba(246, 231, 210, 0.35);
+    border-right: 1px solid rgba(124, 41, 72, 0.28);
   }
 
   .case-process li:last-child {
@@ -1575,6 +1758,11 @@ footer a {
   .hero {
     min-height: 0;
     padding: 73px 22px 96px;
+    background:
+      linear-gradient(rgba(124, 41, 72, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(124, 41, 72, 0.035) 1px, transparent 1px),
+      linear-gradient(180deg, var(--pink-light) 0 44%, var(--cream) 44% 61%, var(--blue-light) 61% 100%);
+    background-size: 48px 48px, 48px 48px, auto;
   }
 
   .hero::before {
@@ -1637,6 +1825,7 @@ footer a {
 
   .opening-note {
     padding: 76px 26px 82px;
+    background: linear-gradient(180deg, var(--pink) 0 50%, var(--blue-light) 50% 100%);
   }
 
   .opening-note::before,
@@ -1739,15 +1928,18 @@ footer a {
   }
 
   .project-accent-image {
-    width: 96px;
-    height: 142px;
+    right: 14px;
+    bottom: 14px;
+    width: 126px;
+    height: 178px;
   }
 
   .professional-case {
     grid-template-columns: 1fr;
     margin-top: 18px;
     padding: 34px 25px 42px;
-    box-shadow: 7px 7px 0 var(--gold);
+    background: linear-gradient(180deg, var(--pink-light) 0 32%, var(--blue-light) 32% 100%);
+    box-shadow: 7px 7px 0 var(--pink);
   }
 
   .case-seal {
@@ -1770,8 +1962,33 @@ footer a {
     grid-column: auto;
   }
 
+  .people-section,
+  .method-section,
+  .next-section,
+  .together-section {
+    background-image: linear-gradient(180deg, var(--blue-mist) 0 50%, var(--pink-light) 50% 100%);
+  }
+
+  .need-lines,
+  .article-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .need-lines {
+    margin-bottom: 34px;
+  }
+
+  .need-lines > * {
+    min-height: 84px;
+  }
+
+  .people-visual {
+    margin-bottom: 24px;
+  }
+
   .writing-strip {
     padding: 34px 24px;
+    background: linear-gradient(180deg, var(--pink-light) 0 44%, var(--blue-mist) 44% 100%);
   }
 
   .article-links a {
