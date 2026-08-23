@@ -49,7 +49,7 @@ test("server-renders Leinstein's public portfolio", async () => {
   assert.match(html, /OAKAnXNgp4Eqy-ZFCykm6w/);
   assert.match(html, /A7UUXFvaaT/);
   assert.match(html, /city-afterimage-demo\.mp4/);
-  assert.match(html, /city-afterimage-lab\.bigdraw123\.chatgpt\.site/);
+  assert.match(html, /leinstein908\.github\.io\/city-afterimage/);
   assert.match(html, /github\.com\/leinstein908\/city-afterimage/);
   assert.match(html, /leinstein-portrait\.jpg/);
   assert.match(html, /new-year-video-illustration\.png/);

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const githubUrl = "https://github.com/leinstein908";
 const cityAfterimageUrl =
-  "https://city-afterimage-lab.bigdraw123.chatgpt.site/";
+  "https://leinstein908.github.io/city-afterimage/";
 const cityAfterimageRepo = "https://github.com/leinstein908/city-afterimage";
 const wechatArticleUrl =
   "https://mp.weixin.qq.com/s/GFpqHJEK8MmPXbtDw8uDyw";

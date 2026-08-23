@@ -2,7 +2,9 @@
 
 面向 AI 产品与解决方案机会、专业合作和同路人连接的一页式个人主页。
 
-公开地址：<https://leinstein-room-908.bigdraw123.chatgpt.site/>
+公开地址：<https://leinstein908.github.io/>
+
+Sites 镜像：<https://leinstein-room-908.bigdraw123.chatgpt.site/>
 
 ## 核心定位
 
@@ -41,6 +43,12 @@ Leinstein 的经验横跨宏观经济发展与空间规划研究、AI 产品原�
 npm install
 npm run dev
 npm test
+```
+
+GitHub Pages 静态构建：
+
+```bash
+npm run build:pages
 ```
 
 ## 资产来源
