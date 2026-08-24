@@ -329,6 +329,16 @@ export default function Home() {
                 <ul className="tag-list">
                   {project.tags.map((tag) => <li key={tag}>{tag}</li>)}
                 </ul>
+                {project.title === "BUY / RENT / WAIT" ? (
+                  <div className="inline-links">
+                    <a href="https://superleilei2026.github.io/buy-rent-wait/" target="_blank" rel="noreferrer">
+                      体验在线作品 ↗
+                    </a>
+                    <a href="https://github.com/SuperLeilei2026/buy-rent-wait" target="_blank" rel="noreferrer">
+                      查看代码与说明 ↗
+                    </a>
+                  </div>
+                ) : null}
               </div>
             </article>
           ))}
