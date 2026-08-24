@@ -25,6 +25,11 @@ jobs:
         with:
           repository: SuperLeilei2026/city-afterimage
           path: .city-afterimage-src
+      - name: Checkout BUY RENT WAIT
+        uses: actions/checkout@v6
+        with:
+          repository: SuperLeilei2026/buy-rent-wait
+          path: .buy-rent-wait-src
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
@@ -33,20 +38,31 @@ jobs:
           cache-dependency-path: |
             package-lock.json
             .city-afterimage-src/package-lock.json
+            .buy-rent-wait-src/package-lock.json
       - name: Install dependencies
         run: npm ci
       - name: Install City Afterimage dependencies
         run: npm ci
         working-directory: .city-afterimage-src
+      - name: Install BUY RENT WAIT dependencies
+        run: npm ci
+        working-directory: .buy-rent-wait-src
       - name: Build static site
         run: npm run build:pages
       - name: Build City Afterimage subsite
         run: npm run build:pages
         working-directory: .city-afterimage-src
+      - name: Build BUY RENT WAIT subsite
+        run: npm run build:pages
+        working-directory: .buy-rent-wait-src
       - name: Add City Afterimage to the profile site
         run: |
           mkdir -p pages-dist/city-afterimage
           cp -R .city-afterimage-src/pages-dist/. pages-dist/city-afterimage/
+      - name: Add BUY RENT WAIT to the profile site
+        run: |
+          mkdir -p pages-dist/buy-rent-wait
+          cp -R .buy-rent-wait-src/pages-dist/. pages-dist/buy-rent-wait/
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

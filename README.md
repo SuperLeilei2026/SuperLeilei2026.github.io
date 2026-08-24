@@ -51,7 +51,7 @@ GitHub Pages 静态构建：
 npm run build:pages
 ```
 
-公开发布工作流还会从 `SuperLeilei2026/city-afterimage` 读取最新代码，将其静态构建放到 `/city-afterimage/` 子路径；因此个人主页与城市潜像共用同一个 GitHub Pages 发布入口。
+公开发布工作流还会读取 `SuperLeilei2026/city-afterimage` 与 `SuperLeilei2026/buy-rent-wait` 的最新代码，将静态构建分别放到 `/city-afterimage/` 与 `/buy-rent-wait/` 子路径；三个公开站点共用同一个 GitHub Pages 发布入口。
 
 ## 资产来源
 
