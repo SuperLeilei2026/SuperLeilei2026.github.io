@@ -51,6 +51,8 @@ GitHub Pages 静态构建：
 npm run build:pages
 ```
 
+公开发布工作流还会从 `SuperLeilei2026/city-afterimage` 读取最新代码，将其静态构建放到 `/city-afterimage/` 子路径；因此个人主页与城市潜像共用同一个 GitHub Pages 发布入口。
+
 ## 资产来源
 
 - `public/leinstein-portrait.jpg`：用户提供并确认可公开的个人照片；
