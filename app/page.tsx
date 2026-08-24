@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-const githubUrl = "https://github.com/leinstein908";
+const githubUrl = "https://github.com/SuperLeilei2026";
 const cityAfterimageUrl =
-  "https://leinstein908.github.io/city-afterimage/";
-const cityAfterimageRepo = "https://github.com/leinstein908/city-afterimage";
+  "https://superleilei2026.github.io/city-afterimage/";
+const cityAfterimageRepo = "https://github.com/SuperLeilei2026/city-afterimage";
 const wechatArticleUrl =
   "https://mp.weixin.qq.com/s/GFpqHJEK8MmPXbtDw8uDyw";
 const fitnessArticleUrl =

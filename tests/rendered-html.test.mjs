@@ -49,8 +49,8 @@ test("server-renders Leinstein's public portfolio", async () => {
   assert.match(html, /OAKAnXNgp4Eqy-ZFCykm6w/);
   assert.match(html, /A7UUXFvaaT/);
   assert.match(html, /city-afterimage-demo\.mp4/);
-  assert.match(html, /leinstein908\.github\.io\/city-afterimage/);
-  assert.match(html, /github\.com\/leinstein908\/city-afterimage/);
+  assert.match(html, /superleilei2026\.github\.io\/city-afterimage/);
+  assert.match(html, /github\.com\/SuperLeilei2026\/city-afterimage/);
   assert.match(html, /leinstein-portrait\.jpg/);
   assert.match(html, /new-year-video-illustration\.png/);
   assert.match(html, /article-big-question-illustration\.png/);

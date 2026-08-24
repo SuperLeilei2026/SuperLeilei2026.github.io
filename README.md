@@ -2,7 +2,7 @@
 
 面向 AI 产品与解决方案机会、专业合作和同路人连接的一页式个人主页。
 
-公开地址：<https://leinstein908.github.io/>
+公开地址：<https://superleilei2026.github.io/>
 
 Sites 镜像：<https://leinstein-room-908.bigdraw123.chatgpt.site/>
 
