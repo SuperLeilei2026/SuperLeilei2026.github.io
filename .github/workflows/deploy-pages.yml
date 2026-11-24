@@ -63,6 +63,10 @@ jobs:
         run: |
           mkdir -p pages-dist/buy-rent-wait
           cp -R .buy-rent-wait-src/pages-dist/. pages-dist/buy-rent-wait/
+      - name: Add SAIG experience page
+        run: |
+          mkdir -p pages-dist/SAIG
+          cp -R SAIG/. pages-dist/SAIG/
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
